@@ -5,8 +5,9 @@ set -euo pipefail
 
 PLUGIN_NAME="suprava-content-agent"
 SOURCE_ROOT="$(cd "$(dirname "$0")" && pwd)"
-SOURCE_MANIFEST="$SOURCE_ROOT/.codex-plugin/plugin.json"
-SOURCE_SKILLS="$SOURCE_ROOT/skills"
+SOURCE_PLUGIN_ROOT="$SOURCE_ROOT/plugins/$PLUGIN_NAME"
+SOURCE_MANIFEST="$SOURCE_PLUGIN_ROOT/.codex-plugin/plugin.json"
+SOURCE_SKILLS="$SOURCE_PLUGIN_ROOT/skills"
 PLUGINS_ROOT="$HOME/plugins"
 TARGET_ROOT="$PLUGINS_ROOT/$PLUGIN_NAME"
 TARGET_MEMORY="$TARGET_ROOT/skills/suprava-content-agent/memory"
@@ -16,12 +17,12 @@ BACKUP_ROOT="$(mktemp -d)"
 BACKUP_MEMORY="$BACKUP_ROOT/memory"
 
 if [ ! -f "$SOURCE_MANIFEST" ]; then
-  echo "Error: .codex-plugin/plugin.json not found. Run this script from the plugin root."
+  echo "Error: plugins/$PLUGIN_NAME/.codex-plugin/plugin.json not found. Run this script from the repository root."
   exit 1
 fi
 
 if [ ! -d "$SOURCE_SKILLS" ]; then
-  echo "Error: skills/ not found. Run this script from the plugin root."
+  echo "Error: plugins/$PLUGIN_NAME/skills/ not found. Run this script from the repository root."
   exit 1
 fi
 
@@ -33,7 +34,7 @@ if [ -d "$TARGET_MEMORY" ]; then
 fi
 
 mkdir -p "$TARGET_ROOT"
-cp -R "$SOURCE_ROOT/.codex-plugin" "$TARGET_ROOT/"
+cp -R "$SOURCE_PLUGIN_ROOT/.codex-plugin" "$TARGET_ROOT/"
 cp -R "$SOURCE_SKILLS" "$TARGET_ROOT/"
 
 for file_name in README.md LICENSE; do

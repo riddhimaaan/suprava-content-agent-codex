@@ -2,8 +2,9 @@
 
 $PluginName = "suprava-content-agent"
 $SourceRoot = $PSScriptRoot
-$SourceManifest = Join-Path $SourceRoot ".codex-plugin\plugin.json"
-$SourceSkills = Join-Path $SourceRoot "skills"
+$SourcePluginRoot = Join-Path $SourceRoot "plugins\$PluginName"
+$SourceManifest = Join-Path $SourcePluginRoot ".codex-plugin\plugin.json"
+$SourceSkills = Join-Path $SourcePluginRoot "skills"
 $PluginsRoot = Join-Path $env:USERPROFILE "plugins"
 $TargetRoot = Join-Path $PluginsRoot $PluginName
 $TargetMemory = Join-Path $TargetRoot "skills\suprava-content-agent\memory"
@@ -13,12 +14,12 @@ $BackupRoot = Join-Path ([System.IO.Path]::GetTempPath()) ("suprava-content-agen
 $BackupMemory = Join-Path $BackupRoot "memory"
 
 if (-not (Test-Path $SourceManifest)) {
-    Write-Error ".codex-plugin\plugin.json not found. Run this script from the plugin root."
+    Write-Error "plugins\$PluginName\.codex-plugin\plugin.json not found. Run this script from the repository root."
     exit 1
 }
 
 if (-not (Test-Path $SourceSkills)) {
-    Write-Error "skills\ not found. Run this script from the plugin root."
+    Write-Error "plugins\$PluginName\skills\ not found. Run this script from the repository root."
     exit 1
 }
 
@@ -31,7 +32,7 @@ if (Test-Path $TargetMemory) {
 
 New-Item -ItemType Directory -Force $TargetRoot | Out-Null
 
-Copy-Item -Recurse -Force (Join-Path $SourceRoot ".codex-plugin") $TargetRoot
+Copy-Item -Recurse -Force (Join-Path $SourcePluginRoot ".codex-plugin") $TargetRoot
 Copy-Item -Recurse -Force $SourceSkills $TargetRoot
 
 foreach ($fileName in @("README.md", "LICENSE")) {

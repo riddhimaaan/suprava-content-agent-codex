@@ -6,8 +6,15 @@
   "plugins": [
     {
       "name": "suprava-content-agent",
-      "displayName": "Suprava Content Agent",
-      "source": "./",
+      "source": {
+        "source": "local",
+        "path": "./plugins/suprava-content-agent"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Writing",
       "description": "Research-first content pipeline for Suprava across research, writing, and humanization."
     }
   ]

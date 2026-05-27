@@ -2,41 +2,72 @@
 
 Research-first content plugin for Suprava's workflow.
 
-This Codex plugin finds real stories, brand moments, campaign specifics, founder angles, and supporting evidence, then routes that research into platform-specific writing flows for LinkedIn, X, and YouTube with a mandatory humanizer pass at the end.
+This repository is packaged in the standard Codex marketplace layout:
+
+- repo marketplace metadata in `.agents/plugins/marketplace.json`
+- installable plugin bundle in `plugins/suprava-content-agent/`
+
+The plugin researches real stories, campaign details, founder angles, and evidence, then hands those briefs to LinkedIn, X, and YouTube writing flows with a required humanizer pass.
+
+## Install
+
+### Standard Codex marketplace flow
+
+Add the repository as a plugin marketplace:
+
+```bash
+codex plugin marketplace add riddhimaaan/suprava-content-agent-codex
+```
+
+Then open Codex and install the plugin from the plugin browser:
+
+```text
+/plugins
+```
+
+Inside the plugin browser:
+
+1. Open the `suprava-content-agent-codex` marketplace
+2. Select `suprava-content-agent`
+3. Choose `Install`
+
+Restart Codex after install if your build prompts for it.
+
+### If your Codex build supports direct CLI install
+
+Some Codex builds also support a direct install command:
+
+```bash
+codex plugin add suprava-content-agent@suprava-content-agent-codex
+```
+
+If that command is unavailable in your environment, use the standard marketplace flow above.
 
 ## What It Does
 
-- Researches content ideas instead of generating generic advice
-- Turns pasted posts or loose topics into source-backed research briefs
+- Researches content ideas instead of returning generic advice
+- Turns pasted posts or topics into source-backed research briefs
 - Surfaces multiple headline angles when the input is broad
-- Hands approved research into platform writers for LinkedIn, X, and YouTube
-- Saves finalized research briefs into a reusable story memory archive
+- Routes finalized research into LinkedIn, X, or YouTube writing workflows
+- Saves finalized research briefs into story memory for future reuse
 
 ## Workflow
 
-The plugin follows a research-first pipeline.
-
-### 1. Research mode detection
-
-The main skill automatically decides which mode fits the user's input:
+The main skill automatically detects the input type:
 
 1. Full idea
 2. Pasted post or story
 3. Topic only
 4. Open question
 
-### 2. Research before writing
-
-For content work, research always comes first. The plugin does not jump straight into post writing.
+For content workflows, research always happens before writing.
 
 - Mode 1 researches 1 to 3 supporting stories
-- Mode 2 reconstructs the full story behind a pasted post or reference
-- Mode 3 first surfaces headline options, then deep-researches the one the user chooses
+- Mode 2 reconstructs the full context behind a referenced story
+- Mode 3 first generates headline options, then deep-researches the user-selected angle
 - Mode 4 answers open-ended research questions directly
 
-### 3. Platform handoff
-
-After a final research brief is delivered, the plugin can hand the story off to:
+After a final research brief is ready, the plugin can hand off to:
 
 - LinkedIn writer
 - X writer
@@ -44,39 +75,27 @@ After a final research brief is delivered, the plugin can hand the story off to:
 
 Every platform output goes through the humanizer before delivery.
 
-## Included Skills
+## Repository Structure
 
 ```text
-skills/
+.agents/
+  plugins/
+    marketplace.json
+plugins/
   suprava-content-agent/
-    SKILL.md
-    references/
-      content-themes.md
-      output-format.md
-      search-strategy.md
-    memory/
-      INDEX.md
+    .codex-plugin/
+      plugin.json
     skills/
-      linkedin-writer/
-      x-writer/
-      youtube-writer/
-      humanizer/
+      suprava-content-agent/
+install.ps1
+install.sh
+README.md
+LICENSE
 ```
 
-## Install In Codex CLI
+## Local Installers
 
-Use the marketplace-based flow:
-
-```bash
-codex plugin marketplace add riddhimaaan/suprava-content-agent-codex
-codex plugin add suprava-content-agent@suprava-content-agent-codex
-```
-
-This adds the repository as a plugin marketplace source, then installs `suprava-content-agent` from it.
-
-## Alternative Local Install
-
-If you want a local script-based install instead, this repo also includes installers.
+This repo also includes local installers for direct installation from a checkout.
 
 ### Windows
 
@@ -90,76 +109,29 @@ If you want a local script-based install instead, this repo also includes instal
 bash install.sh
 ```
 
-## What The Local Installer Does
+The local installers:
 
-The local installer:
-
-- copies this plugin into your local Codex plugins directory
-- registers it in your personal plugin marketplace
-- preserves saved story memory on reinstall
-
-Installed location for local installs:
-
-- Windows: `%USERPROFILE%\plugins\suprava-content-agent`
-- macOS / Linux: `~/plugins/suprava-content-agent`
-
-## Using The Plugin In Codex
-
-After installing:
-
-1. Restart Codex
-2. Open `Plugins`
-3. Install `Suprava Content Agent` from your personal marketplace
-4. Start using it with prompts like:
-
-```text
-Research 5 angles on creator-led GTM.
-```
-
-```text
-I saw a campaign from a brand using direct mail creatively. Research the full story.
-```
-
-```text
-Turn this research brief into a LinkedIn post.
-```
-
-```text
-Build a YouTube script from this research brief.
-```
+- copy the plugin bundle into your local Codex plugins directory
+- update your personal marketplace at `~/.agents/plugins/marketplace.json`
+- preserve existing story memory on reinstall
 
 ## Story Memory
 
-Finalized research briefs are saved into the plugin's memory folder so old stories can be tracked and reused later.
-
-Memory location:
+Finalized research briefs are stored inside the installed plugin:
 
 - Windows: `%USERPROFILE%\plugins\suprava-content-agent\skills\suprava-content-agent\memory\`
 - macOS / Linux: `~/plugins/suprava-content-agent/skills/suprava-content-agent/memory/`
 
 This includes:
 
-- `INDEX.md` as the running archive
+- `INDEX.md` as the running story archive
 - one dated markdown file per saved story
-
-## Repository Structure
-
-```text
-.codex-plugin/
-  plugin.json
-skills/
-  suprava-content-agent/
-install.ps1
-install.sh
-README.md
-LICENSE
-```
 
 ## Notes
 
-- This repository is the Codex plugin package, not the original Claude plugin source repo
-- The runtime pieces Codex needs are `.codex-plugin/` and `skills/`
-- Research briefs are source-backed by design and intended to feed downstream content creation
+- This repo is the Codex plugin package, not the original Claude plugin source repo
+- Codex marketplace metadata lives at `.agents/plugins/marketplace.json`
+- The installable plugin itself lives at `plugins/suprava-content-agent/`
 
 ## License
 
