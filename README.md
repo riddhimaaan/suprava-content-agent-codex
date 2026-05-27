@@ -63,11 +63,22 @@ skills/
       humanizer/
 ```
 
-## Installation
+## Install In Codex CLI
+
+Use the marketplace-based flow:
+
+```bash
+codex plugin marketplace add riddhimaaan/suprava-content-agent-codex
+codex plugin add suprava-content-agent@suprava-content-agent-codex
+```
+
+This adds the repository as a plugin marketplace source, then installs `suprava-content-agent` from it.
+
+## Alternative Local Install
+
+If you want a local script-based install instead, this repo also includes installers.
 
 ### Windows
-
-Run:
 
 ```powershell
 .\install.ps1
@@ -75,21 +86,19 @@ Run:
 
 ### macOS / Linux
 
-Run:
-
 ```bash
 bash install.sh
 ```
 
-## What The Installer Does
+## What The Local Installer Does
 
-The installer:
+The local installer:
 
 - copies this plugin into your local Codex plugins directory
 - registers it in your personal plugin marketplace
 - preserves saved story memory on reinstall
 
-Installed location:
+Installed location for local installs:
 
 - Windows: `%USERPROFILE%\plugins\suprava-content-agent`
 - macOS / Linux: `~/plugins/suprava-content-agent`

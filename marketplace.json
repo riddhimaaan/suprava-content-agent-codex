@@ -1,0 +1,14 @@
+{
+  "name": "suprava-content-agent-codex",
+  "owner": {
+    "name": "riddhimaaan"
+  },
+  "plugins": [
+    {
+      "name": "suprava-content-agent",
+      "displayName": "Suprava Content Agent",
+      "source": "./",
+      "description": "Research-first content pipeline for Suprava across research, writing, and humanization."
+    }
+  ]
+}
