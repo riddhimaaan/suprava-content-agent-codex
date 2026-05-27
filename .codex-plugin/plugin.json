@@ -1,0 +1,39 @@
+{
+  "name": "suprava-content-agent",
+  "version": "1.0.0",
+  "description": "Research-first content pipeline for Suprava across research, writing, and humanization.",
+  "skills": "./skills/",
+  "author": {
+    "name": "Riddhiman Bania"
+  },
+  "homepage": "https://github.com/riddhimaaan/suprava-content-agent",
+  "repository": "https://github.com/riddhimaaan/suprava-content-agent",
+  "license": "MIT",
+  "keywords": [
+    "content",
+    "research",
+    "writing",
+    "linkedin",
+    "x",
+    "youtube",
+    "humanizer"
+  ],
+  "interface": {
+    "displayName": "Suprava Content Agent",
+    "shortDescription": "Research-first content briefs and platform writing flows.",
+    "longDescription": "Finds real stories, turns them into source-backed briefs, and hands them off to LinkedIn, X, and YouTube writing flows with a mandatory humanizer pass.",
+    "developerName": "Riddhiman Bania",
+    "category": "Writing",
+    "capabilities": [
+      "Interactive",
+      "Read",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "Research 5 angles on a content topic for Suprava.",
+      "Turn this campaign story into a LinkedIn post.",
+      "Build a YouTube script from this research brief."
+    ],
+    "brandColor": "#1F6FEB"
+  }
+}
