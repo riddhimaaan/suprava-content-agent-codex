@@ -19,8 +19,8 @@ Before rewriting, read the voice reference for the active platform:
 **LinkedIn:** Read `skills/linkedin-writer/references/suprava_sabat_template_reference.md`.
 Extract: sentence length (short, punchy), paragraph breaks (single lines, lots of white space), CTA style (direct asks, comment bait), opening patterns (statement or question hook), punctuation habits.
 
-**X (Twitter):** Read `skills/x-writer/system.md`, `skills/x-writer/copy-principles.md`, and `skills/x-writer/writing-principles.md`.
-Extract: STAR beat flow, hook style (bold first line, no warmup), specific numbers over vague claims, short paragraph rhythm, and CTA fit.
+**X (Twitter):** Read `skills/x-writer/system.md`, `skills/x-writer/hook-guide.md`, and `skills/x-writer/writing-principles.md`.
+Extract: selected framework flow, hook style (bold first line, no warmup), specific numbers over vague claims, short paragraph rhythm, simple wording, context for cold readers, and CTA fit.
 
 **YouTube script:** Match the Channel Voice already defined in `skills/youtube-writer/skills/05-script-writer/script-writer.md` — direct, practitioner tone, short sentences, "you" as subject, no filler transitions. No external voice reference needed.
 

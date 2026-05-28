@@ -12,7 +12,6 @@ Write tweets and threads that stop the scroll and drive engagement for any topic
 
 Before writing, read and internalize these files in the same directory:
 - `hook-guide.md` - X-only guide for bold, high-curiosity hooks
-- `copy-principles.md` - hooks, CTAs, formatting, psychological triggers
 - `writing-principles.md` - core writing quality rules
 
 ---
@@ -24,7 +23,7 @@ Structure and writing quality are separate:
 | Source | What it provides | What it does NOT provide |
 |---|---|---|
 | STAR, PAS, or AIDA framework (choose one) | Content skeleton, hook shape, story flow, and CTA placement | Tone, sentence quality, phrasing |
-| `hook-guide.md` + `copy-principles.md` + `writing-principles.md` | Hook strength, tone, formatting, readability, engagement mechanics | Structure |
+| `hook-guide.md` + `writing-principles.md` | Hook strength, tone, formatting, readability, engagement mechanics | Structure |
 
 The framework decides what each part of the tweet or thread needs to do. The writing principles decide how that part should sound on X.
 
@@ -42,6 +41,9 @@ These rules apply to the hook, body, CTA, and every thread tweet:
 - Add context early: who the company/person is, what they do, why the moment matters, and why the reader should care.
 - Keep the context tight. One clear line is better than a long setup.
 - Every hook must pass the `hook-guide.md` checklist before writing the body.
+- Use specific numbers, names, and actions when the research gives them.
+- Keep CTAs direct and low-friction. If a CTA does not improve the post, end on a strong closing line.
+- Format for skimming: short lines, clear breaks, and no dense blocks.
 
 ---
 
@@ -137,7 +139,7 @@ Pick the format that fits the content. Don't default to one.
 
 ## Step 4 - Choose the hook type
 
-Pick the hook pattern that fits the content. Reference `hook-guide.md` first, then the hook section in `copy-principles.md`.
+Pick the hook pattern that fits the content. Reference `hook-guide.md`.
 
 Common hook types:
 - **Bold claim** - "This tool replaced my entire stack"
@@ -169,7 +171,7 @@ Match the CTA to the content type:
 
 ## Step 6 - Write the content
 
-Apply all rules from `hook-guide.md`, `copy-principles.md`, and `writing-principles.md`:
+Apply all rules from `hook-guide.md` and `writing-principles.md`:
 - Hook in the first line - no warmup
 - Hook must follow `hook-guide.md`
 - Short paragraphs (1-2 lines max)
@@ -212,7 +214,7 @@ CTA TYPE: [type of CTA]
 After producing the output in Step 7, run the `social-humanizer` skill before delivering to the user.
 
 1. Identify the format as X/Twitter.
-2. Use the X writer files as calibration: `hook-guide.md`, `copy-principles.md`, and `writing-principles.md`.
+2. Use the X writer files as calibration: `hook-guide.md` and `writing-principles.md`.
 3. Preserve the chosen framework, hook strength, line breaks, number specificity, CTA rhythm, and context.
 4. Follow the social humanizer draft -> audit -> final process.
 5. Deliver only the final humanized content - do not show the pre-humanized draft or audit.

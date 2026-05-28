@@ -39,6 +39,12 @@ One idea per sentence. One topic per paragraph. Don't overload — readers are e
 ## 9. Format for skimmers
 Most people skim. Use short paragraphs, line breaks, bullets, and numbers. Make key points stand out visually.
 
+For X:
+- Keep paragraphs to 1-2 short lines.
+- Use bullets or numbered lines only when they make the idea easier to scan.
+- Never write a wall of text.
+- Put the strongest point where the eye lands fast: first line, line after the hook, or final line.
+
 ## 10. Be concrete
 Specific > abstract. "Cut meetings from 2 hours to 30 mins" beats "improve efficiency." Paint a clear picture.
 
@@ -73,3 +79,38 @@ End with a punch — summarize, challenge, or provoke thought. Good endings stic
 Do not trade clarity for mystery. A hook can create curiosity, but the post still needs to orient the reader quickly.
 
 If the reader needs outside knowledge to understand the post, add one plain context line.
+
+## 18. Use proof and payoff
+
+Specific proof makes X posts feel real.
+
+Use:
+- real company names
+- real founder or team names
+- exact numbers
+- time frames
+- clear actions
+- before/after contrast
+
+Avoid vague claims like "great results", "big growth", or "changed everything" unless the next line proves it.
+
+## 19. Choose the right CTA
+
+Use a CTA only when it fits the post.
+
+- For a resource: ask for a clear comment word and say what the reader gets.
+- For a link: point to the link or thread plainly.
+- For an opinion: ask a simple question.
+- For a story or lesson: skip the CTA if the closing line is stronger.
+
+Never let the CTA feel louder than the idea.
+
+## 20. Write with X rhythm
+
+X writing should feel quick, sharp, and human.
+
+- Use contractions.
+- Talk to the reader directly.
+- Lead with the payoff.
+- Cut filler.
+- Avoid market-worn openers like "Most people", "Everyone is talking about", and "Here's what you need to know".
