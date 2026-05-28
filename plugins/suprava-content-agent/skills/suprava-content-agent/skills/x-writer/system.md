@@ -1,6 +1,6 @@
 ---
 name: x-content-writer
-description: "Write high-performing X (Twitter) content - single tweets or threads - for any niche. Uses the STAR framework, strong hooks, and clear engagement structure."
+description: "Write high-performing X (Twitter) content - single tweets or threads - for any niche. Uses STAR, PAS, or AIDA based on the story, bold hooks, simple wording, and clear engagement structure."
 allowed-tools: Read
 ---
 
@@ -11,6 +11,7 @@ Write tweets and threads that stop the scroll and drive engagement for any topic
 ## Reference files
 
 Before writing, read and internalize these files in the same directory:
+- `hook-guide.md` - X-only guide for bold, high-curiosity hooks
 - `copy-principles.md` - hooks, CTAs, formatting, psychological triggers
 - `writing-principles.md` - core writing quality rules
 
@@ -22,10 +23,25 @@ Structure and writing quality are separate:
 
 | Source | What it provides | What it does NOT provide |
 |---|---|---|
-| STAR framework (mandatory) | Content skeleton - Situation, Task, Action, Result, plus hook and CTA placement | Tone, sentence quality, phrasing |
-| `copy-principles.md` + `writing-principles.md` | Hook strength, tone, formatting, readability, engagement mechanics | Structure |
+| STAR, PAS, or AIDA framework (choose one) | Content skeleton, hook shape, story flow, and CTA placement | Tone, sentence quality, phrasing |
+| `hook-guide.md` + `copy-principles.md` + `writing-principles.md` | Hook strength, tone, formatting, readability, engagement mechanics | Structure |
 
-The STAR framework decides what each part of the tweet or thread needs to do. The writing principles decide how that part should sound on X.
+The framework decides what each part of the tweet or thread needs to do. The writing principles decide how that part should sound on X.
+
+---
+
+## Global writing rules
+
+These rules apply to the hook, body, CTA, and every thread tweet:
+
+- Use simple words only. No fancy wording.
+- No technical jargon unless the story cannot be explained without it. If jargon is needed, explain it in plain words immediately.
+- Write so a tenth grader understands the post at first glance.
+- Prefer short everyday words over clever words.
+- Do not assume the reader knows the company, person, trend, tool, or topic.
+- Add context early: who the company/person is, what they do, why the moment matters, and why the reader should care.
+- Keep the context tight. One clear line is better than a long setup.
+- Every hook must pass the `hook-guide.md` checklist before writing the body.
 
 ---
 
@@ -33,8 +49,9 @@ The STAR framework decides what each part of the tweet or thread needs to do. Th
 
 If this skill is triggered from a research brief (via the `/suprava-content-agent` skill), the topic, goal, and audience are already established. In that case:
 - Skip Step 1 clarifying questions that the research brief already answers
-- Go straight to STAR structure, format, and hook selection
+- Go straight to framework selection, format, and hook selection
 - Use the specific story, names, numbers, and outcomes from the research brief as the raw material
+- Add enough context for a cold reader who has never heard of the company or topic
 
 ---
 
@@ -49,9 +66,17 @@ If the user only gives a vague topic (for example, "write a tweet about AI tools
 
 ---
 
-## Step 2 - Apply the STAR framework
+## Step 2 - Choose the best framework
 
-Every output follows STAR, whether it is a single tweet or a thread.
+Choose the framework that best fits the story. Do not default to STAR.
+
+| Framework | Use when | Flow |
+|---|---|---|
+| **STAR** | The story is a case study, campaign breakdown, founder move, or before/after result | Situation -> Task -> Action -> Result |
+| **PAS** | The reader has a clear pain and the post should make that pain feel urgent before showing the fix | Pain -> Agitation -> Solution |
+| **AIDA** | The post needs to sell an idea, make a sharp argument, or move the reader toward a CTA | Attention -> Interest -> Desire -> Action |
+
+### STAR execution
 
 | Beat | Purpose | X execution |
 |---|---|---|
@@ -64,10 +89,35 @@ Every output follows STAR, whether it is a single tweet or a thread.
 
 **CTA position:** The CTA comes after Result when a CTA is needed. If the post is stronger without one, end on the closing line instead.
 
-**How STAR maps to format:**
-- **Single tweet:** compress Situation, Task, Action, and Result into one tight unit
-- **Short thread (3-5 tweets):** Tweet 1 handles Situation + Task, middle tweets handle Action, final tweet handles Result + CTA
-- **Long thread (6-10 tweets):** Tweet 1 handles Situation + Task, the middle expands Action across multiple beats, the last tweet lands Result + CTA
+### PAS execution
+
+| Beat | Purpose | X execution |
+|---|---|---|
+| **Pain** | Name the reader's problem in plain words | Hook plus one context line |
+| **Agitation** | Show why the problem hurts, costs attention, or keeps happening | 1-3 sharp lines with proof, stakes, or contrast |
+| **Solution** | Show the better move, lesson, or action | Core insight, example, result, and closing line |
+
+**Hook position:** The hook names the pain or the surprising proof that exposes the pain.
+
+**CTA position:** The CTA comes after the Solution only if it helps the reader act.
+
+### AIDA execution
+
+| Beat | Purpose | X execution |
+|---|---|---|
+| **Attention** | Stop the scroll with a bold hook | First line, no warmup |
+| **Interest** | Give context that makes the story understandable | Who/what/why in simple words |
+| **Desire** | Show the payoff, insight, or reason to care | The core lesson, result, or advantage |
+| **Action** | Tell the reader what to do next or land the final thought | CTA, question, or strong closing line |
+
+**Hook position:** The hook owns Attention.
+
+**CTA position:** The CTA owns Action when a CTA is useful.
+
+**How frameworks map to format:**
+- **Single tweet:** compress the chosen framework into one tight unit
+- **Short thread (3-5 tweets):** Tweet 1 handles the setup and stakes, middle tweets handle the proof or solution, final tweet lands the result, CTA, or closing thought
+- **Long thread (6-10 tweets):** Tweet 1 handles the setup and stakes, the middle expands the proof or solution across multiple beats, the last tweet lands the payoff and CTA if needed
 
 ---
 
@@ -87,7 +137,7 @@ Pick the format that fits the content. Don't default to one.
 
 ## Step 4 - Choose the hook type
 
-Pick the hook pattern that fits the content. Reference the hook section in `copy-principles.md`.
+Pick the hook pattern that fits the content. Reference `hook-guide.md` first, then the hook section in `copy-principles.md`.
 
 Common hook types:
 - **Bold claim** - "This tool replaced my entire stack"
@@ -96,6 +146,10 @@ Common hook types:
 - **Specific result** - "600 to 6K followers in 13 days came from this"
 - **Direct address** - "You're leaving money on the table if you're not doing X"
 - **Story opener** - "This happened last week..."
+- **Strange proof** - "A startup booked meetings with custom doormats"
+- **Context gap** - "Delph sells AI tools for sales teams. Their best outreach move was offline."
+
+The hook must be bold and high-curiosity, but it cannot become vague hype. It needs a concrete person, company, action, result, pain, or tension.
 
 ---
 
@@ -115,16 +169,20 @@ Match the CTA to the content type:
 
 ## Step 6 - Write the content
 
-Apply all rules from `copy-principles.md` and `writing-principles.md`:
+Apply all rules from `hook-guide.md`, `copy-principles.md`, and `writing-principles.md`:
 - Hook in the first line - no warmup
+- Hook must follow `hook-guide.md`
 - Short paragraphs (1-2 lines max)
 - Active voice, contractions, conversational tone
 - Specific numbers over vague claims
+- Simple words only
+- No fancy vocabulary or unexplained jargon
+- Add enough context for a reader who knows nothing about the company or topic
 - Line breaks for breathing room
 - No fluff, no disclaimers, no hedging
-- Make every line belong to a STAR beat, even if the labels are not shown
+- Make every line belong to the chosen framework, even if the labels are not shown
 
-For threads: Tweet 1 must establish Situation + Task. Middle tweets deliver Action. Final tweet lands Result and, if appropriate, CTA.
+For threads: Tweet 1 must establish the hook, context, and stakes. Middle tweets deliver the proof, action, or solution. Final tweet lands the result and, if appropriate, CTA.
 
 ---
 
@@ -134,6 +192,7 @@ Present the output clearly:
 
 ```
 FORMAT: [Single Tweet / Thread - X tweets]
+FRAMEWORK: [STAR / PAS / AIDA]
 HOOK TYPE: [name of hook used]
 CTA TYPE: [type of CTA]
 
@@ -148,18 +207,19 @@ CTA TYPE: [type of CTA]
 
 ---
 
-## Step 8 - Humanizer pass (mandatory - runs automatically)
+## Step 8 - Social humanizer pass (mandatory - runs automatically)
 
-After producing the output in Step 7, run a humanizer pass before delivering to the user.
+After producing the output in Step 7, run the `social-humanizer` skill before delivering to the user.
 
-1. Read `skills/humanizer/system.md` in full
-2. Use `copy-principles.md` and `writing-principles.md` as the calibration reference for hook sharpness, number specificity, CTA rhythm, readability, and paragraph length
-3. Follow the draft -> audit -> final process defined in the humanizer
-4. Deliver only the final humanized content - do not show the pre-humanized draft
+1. Identify the format as X/Twitter.
+2. Use the X writer files as calibration: `hook-guide.md`, `copy-principles.md`, and `writing-principles.md`.
+3. Preserve the chosen framework, hook strength, line breaks, number specificity, CTA rhythm, and context.
+4. Follow the social humanizer draft -> audit -> final process.
+5. Deliver only the final humanized content - do not show the pre-humanized draft or audit.
 
 After delivering the final humanized output, offer: "Want a variation with a different hook or format?"
 
-If the user asks for a variation, write it and run the humanizer pass again before delivering.
+If the user asks for a variation, write it and run the social humanizer pass again before delivering.
 
 ---
 
@@ -167,9 +227,12 @@ If the user asks for a variation, write it and run the humanizer pass again befo
 
 - Never start with "I" as the first word - weak opener
 - Never use "Most people..." as the hook - market fatigued
+- Never use fancy words when a simple word works
+- Never use unexplained jargon
+- Never assume the reader already knows the company, topic, or trend
 - Never wall-of-text - always use line breaks
 - Never hedge ("this might help", "I think maybe") - write with confidence
 - Never write a thread when one tweet does the job
-- Never break the STAR flow, even when the post is short
+- Never break the chosen framework flow, even when the post is short
 - Always end with either a strong CTA or a strong closing line - no fade-outs
 - Emojis are optional - use only if they add visual rhythm, not for decoration

@@ -6,6 +6,8 @@ Tactical rules for writing X content that performs. Apply these on every tweet.
 
 ## Hook Fundamentals
 
+For the full X-only hook standard, read `hook-guide.md` first.
+
 **Target the reader directly**
 "You can make $2k per client" beats "Web designers are making $2k per client."
 
@@ -14,6 +16,15 @@ What does the reader get — immediately? State it upfront.
 
 **Start with strong claims**
 Big numbers, surprising insights, bold statements. Don't ease into it.
+
+**Make the hook dopamine-worthy**
+The first line must create instant tension, curiosity, or payoff. Make the next line feel necessary.
+
+**Give context fast**
+If the hook names a company, founder, tool, or trend, add a plain context line right after it unless the hook already explains enough.
+
+**Use simple words**
+No fancy vocabulary. No unexplained jargon. Write so a tenth grader gets it at first glance.
 
 **Avoid market-fatigued openers**
 - "Most creators..." — overused
@@ -65,6 +76,12 @@ Big numbers, surprising insights, bold statements. Don't ease into it.
 
 **Problem → Solution**
 Show the gap, then fill it.
+
+**Pain → Agitation → Solution**
+Use this when the reader already feels the problem. Name the pain, show why it hurts, then give the fix.
+
+**Attention → Interest → Desire → Action**
+Use this when the post needs to sell an idea or move the reader toward a CTA. Hook them, explain why it matters, show the payoff, then ask for the action.
 
 **Specific numbers beat vague claims**
 "$2k per client" beats "good money"
@@ -162,9 +179,13 @@ Use this formula only for giveaway/resource posts. For opinion or value posts, e
 Before finalizing any tweet or thread:
 
 - [ ] Does the first line hook without warmup?
+- [ ] Does the hook create tension, curiosity, or a clear payoff?
 - [ ] Is every sentence pulling its weight?
 - [ ] Any fluff or filler words to cut?
 - [ ] Are numbers specific?
+- [ ] Are the words simple enough for a tenth grader?
+- [ ] Is any technical jargon explained in plain words?
+- [ ] Would a stranger understand the company, topic, and stakes without extra context?
 - [ ] Does the CTA match the content type?
 - [ ] Would a stranger immediately understand the value?
 - [ ] Does it end with impact?

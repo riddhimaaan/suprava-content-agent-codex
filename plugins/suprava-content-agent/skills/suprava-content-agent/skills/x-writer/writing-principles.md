@@ -19,6 +19,14 @@ Like talking to a friend, not writing a report. Use contractions, questions, "yo
 ## 5. Keep it simple
 Simple ≠ dumb. Fewer, sharper sentences win. The goal is frictionless idea transfer.
 
+For X, simple means a tenth grader should understand the post at first glance.
+
+- Use everyday words.
+- Cut fancy words.
+- Avoid technical jargon.
+- If a technical word is needed, explain it in plain language right away.
+- Never make the reader reread a sentence to understand it.
+
 ## 6. Open strong
 The first sentence matters most. Start with curiosity, value, or a surprise. Hook immediately or lose them.
 
@@ -33,6 +41,14 @@ Most people skim. Use short paragraphs, line breaks, bullets, and numbers. Make 
 
 ## 10. Be concrete
 Specific > abstract. "Cut meetings from 2 hours to 30 mins" beats "improve efficiency." Paint a clear picture.
+
+Add enough context for a cold reader. Do not assume they know the company, person, trend, tool, or market.
+
+Good context answers fast:
+- Who is this about?
+- What do they do?
+- What happened?
+- Why should the reader care?
 
 ## 11. Use stories and emotion
 Facts inform, stories stick. Emotion + logic = memorable. Be willing to show failure, not just success.
@@ -51,3 +67,9 @@ Skip disclaimers like "this might seem obvious" or "this might help." If you're 
 
 ## 16. Finish strong
 End with a punch — summarize, challenge, or provoke thought. Good endings stick. Bad endings fade.
+
+## 17. Context beats cleverness
+
+Do not trade clarity for mystery. A hook can create curiosity, but the post still needs to orient the reader quickly.
+
+If the reader needs outside knowledge to understand the post, add one plain context line.
